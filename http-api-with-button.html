@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>API를 통해 데이터 불러오는 예제</title>
+</head>
+<body>
+<h1 id="title"></h1>
+<p id="content"></p>
+<input type="button" value="제목/내용 불러오기" onclick="loadTitleAndContent()">
+<script>
+    function loadTitleAndContent() {
+        fetch('https://yjiq150.github.io/cb-sample/example-data.json')
+            .then(response => response.json())
+            .then(result => {
+                document.getElementById('title').textContent = result.title
+                document.getElementById('content').textContent = result.content
+            })
+    }
+</script>
+</body>
+</html>
