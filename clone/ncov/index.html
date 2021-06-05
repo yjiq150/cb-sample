@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun= -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>코로나바이러스감염증-19 &gt; 발생동향
+
+ &gt; 국내 발생 현황
+
+
+
+
+</title>
+
+
+<meta name="description" content="코로나바이러스감염증-19,발생동향, 국내 발생 현황, 누적 검사현황, 확진환자 지역별 비율 등 안내">
+<meta property="og:description" content="코로나바이러스감염증-19,발생동향, 국내 발생 현황, 누적 검사현황, 확진환자 지역별 비율 등 안내">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<meta name="author" content="보건복지부, 코로나바이러스감염증-19(COVID-19), 질병관리청">     
+<meta name="keywords" content="코로나바이러스감염증-19(COVID-19), 코로나바이러스감염증-19, 코로나바이러스, 보건복지부">	
+<meta name="copyright" content="보건복지부">
+
+<meta property="og:url" content="http://ncov.mohw.go.kr/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="코로나바이러스감염증-19(COVID-19)">
+<meta property="og:locale" content="ko">
+<meta property="og:title" content="코로나바이러스감염증-19(COVID-19)">
+<meta property="og:image" content="http://ncov.mohw.go.kr/static/image/header/homeimg_new.jpg"> 
+    
+<link rel="icon" type="image/png" sizes="64x64" href="http://ncov.mohw.go.kr/static/image/header/ROK.png">
+<link rel="stylesheet" href="./index_files/co_common.css">
+<link rel="stylesheet" href="./index_files/co_component.css">
+<link rel="stylesheet" href="./index_files/lightslider.min.css">
+
+<script type="text/javascript" async="" src="./index_files/analytics.js"></script><script src="./index_files/jquery-1.11.2.min.js"></script>
+<script src="./index_files/lightslider.min.js"></script>
+<script src="./index_files/co_common.js"></script>
+
+<script type="text/javaScript" language="javascript">
+
+function fn_goMenu(url, brd_id, brd_gubun, data_Gubun){
+	
+	$("#brdId").val(brd_id);
+	$("#brdGubun").val(brd_gubun);
+	$("#dataGubun").val(data_Gubun);
+
+	var frm = $("#menuFrm");
+	frm.attr("action", url);
+	frm.submit();
+}
+
+function fn_boardView(url, brdId, brdGubun, ncvContSeq, board_id, dataGubun){
+	$("#brdId").val(brdId);
+	$("#brdGubun").val(brdGubun);
+	$("#ncvContSeq").val(ncvContSeq);
+	$("#contSeq").val(ncvContSeq);
+	$("#board_id").val(board_id);
+	$("#dataGubun").val(dataGubun);
+
+	var frm = $("#menuFrm");
+	frm.attr("action", url);
+	frm.submit();
+}
+
+function fn_tcm_boardView(url, brdId, brdGubun, ncvContSeq, board_id, gubun){
+	
+	$("#brdId").val(brdId);
+	$("#brdGubun").val(brdGubun);
+	$("#ncvContSeq").val(ncvContSeq);
+	$("#contSeq").val(ncvContSeq);
+	$("#board_id").val(board_id);
+	$("#gubun").val(gubun);
+	
+	var frm = $("#menuFrm");
+	frm.attr("action", url);
+	frm.submit();
+	
+}
+
+
+function search( where ){
+	
+	var thisForm = $("#"+ where);
+	var thisSearch = $(thisForm).find("#searchTerm");
+	var cont = $(thisSearch).val();
+	
+	//특수문자 체크
+	if (containsChars(cont,"~!@#$%^&*()+|`=\\[]{};:'\".<>/?")) {
+		alert("특수문자는 제외하고 검색해주시기 바랍니다.");
+		$(thisSearch).val("");
+		event.preventDefault();
+		return false;
+	}else if ( cont == "" || cont == null || cont == undefined){
+		alert("검색어를 입력하세요");
+		$(thisSearch).focus();
+		event.preventDefault();
+		return false;
+	}
+	
+	return true;		
+	
+}
+
+
+
+</script>
+
+	<link rel="stylesheet" href="./index_files/chart_kr.css">
+	<script src="./index_files/Chart.min.js"></script>
+	<script src="./index_files/chartjs-plugin-datalabels.min.js"></script>
+	<script src="./index_files/chart_kr.js"></script>
+
+<style type="text/css">/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head><body><form name="menuFrm" id="menuFrm" method="get">
+	<input name="brdId" id="brdId" type="hidden">
+	<input name="brdGubun" id="brdGubun" type="hidden">
+	<input name="dataGubun" id="dataGubun" type="hidden">
+	<input name="ncvContSeq" id="ncvContSeq" type="hidden">
+	<input name="contSeq" id="contSeq" type="hidden">
+	<input name="board_id" id="board_id" type="hidden">
+	<input name="gubun" id="gubun" type="hidden">
+</form>
+
+
+
+<div class="wrap nj">
+
+		<div class="w_catch">
+			<div class="wc_p t_dp_n m_dp_n"><span class="hdn">너비 1180px 이상</span></div>
+			<div class="wc_t p_dp_n m_dp_n"><span class="hdn">너비 768px - 1179px</span></div>
+			<div class="wc_m p_dp_n t_dp_n"><span class="hdn">너비 767px 이하</span></div>
+		</div>
+
+		<div class="navigation t_dp_n m_dp_n">
+			<div>
+				<div class="n_left"><h1 class="corona_h1"><a href="http://ncov.mohw.go.kr/">코로나바이러스감염증-19<span>(COVID-19)</span></a></h1></div>
+                <div class="n_right">
+                	<ul class="shim">
+                		<li><a href="http://ncv.kdca.go.kr/" target="_blank" title="새창">코로나19 백신 및 예방접종<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                    	<li><a href="http://www.mohw.go.kr/" target="_blank" title="새창">중앙사고수습본부<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                        <li><a href="http://www.kdca.go.kr/" target="_blank" title="새창">중앙방역대책본부<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                    </ul>
+					<ul class="sns">
+						<li class="facebook"><a href="http://www.facebook.com/koreadca" target="_blank" title="질병관리청 페이스북으로 새창">페이스북<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+						<li class="youtube"><a href="https://youtube.com/channel/UCa7-3Zvxg-5Rfxgu3RQY_gw" target="_blank" title="질병관리청 유튜브 새창">유튜브<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+						<li class="post"><a href="https://post.naver.com/my.nhn?memberNo=20182790" target="_blank" title="질병관리청 포스트 새창">포스트<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+						<li class="twitter"><a href="http://twitter.com/koreadca" target="_blank" title="질병관리청 트위터 새창">트위터<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+					</ul>					
+					<ul class="country">
+						 <li><a href="http://ncov.mohw.go.kr/en/" target="_blank" title="새창">English<i class="ico_window"><span class="hdn">새창</span></i></a></li> 
+						<li><a href="http://ncov.mohw.go.kr/cn/" target="_blank" title="새창">中文<i class="ico_window"><span class="hdn">새창</span></i></a></li> 
+					</ul>
+                </div>
+			</div>
+		</div>
+
+		<div id="header" class="header">
+			<div>
+            	<div class="h_left">
+					<h1 class="logo"><a href="http://ncov.mohw.go.kr/">코로나바이러스감염증-19<span>(COVID-19)</span></a></h1>
+					<div class="t_top_other">
+						<ul class="t_sns">
+							<li class="facebook"><a href="http://www.facebook.com/koreadca" target="_blank" title="질병관리청 페이스북으로 새창">페이스북<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+							<li class="youtube"><a href="https://youtube.com/channel/UCa7-3Zvxg-5Rfxgu3RQY_gw" target="_blank" title="질병관리청 유튜브 새창">유튜브<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+							<li class="post"><a href="https://post.naver.com/my.nhn?memberNo=20182790" target="_blank" title="질병관리청 포스트 새창">포스트<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+							<li class="twitter"><a href="http://twitter.com/koreadca" target="_blank" title="질병관리청 트위터 새창">트위터<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+						</ul>
+						<ul class="t_camp">
+							<li><a href="http://ncv.kdca.go.kr/" target="_blank" title="새창">코로나19 백신 및 예방접종<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+							<li><a href="http://www.mohw.go.kr/" target="_blank" title="새창">중앙사고수습본부<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+							<li><a href="http://www.kdca.go.kr/" target="_blank" title="새창">중앙방역대책본부<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+						</ul>						
+						<ul class="t_country">
+							<li><a href="http://ncov.mohw.go.kr/en/" target="_blank" title="새창">English<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+							<li><a href="http://ncov.mohw.go.kr/cn/" target="_blank" title="새창">中文<i class="ico_window"><span class="hdn">새창</span></i></a></li> 
+						</ul>
+					</div>						
+				</div>
+				<div class="h_right">
+					<div id="gnb" class="gnb subfix t_dp_n m_dp_n">
+                        <ul>
+                            <li><a href="http://ncov.mohw.go.kr/baroView.do?brdId=4&amp;brdGubun=41">바로알기</a>
+                                <div class="g_fixsub" style="display: none;"><div>
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/baroView.do?brdId=4&amp;brdGubun=41">코로나19 란? </a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/baroView2.do?brdId=4&amp;brdGubun=42">대한민국 방역체계</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/baroView3.do?brdId=4&amp;brdGubun=43">환자치료 및 관리</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/baroView4.do?brdId=4&amp;brdGubun=44">예방 조치 안내</a></li>                                        
+                                    </ul>
+                                </div></div>                            
+                            </li>
+                            <li class="on"><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=11">발생동향</a>
+                                <div class="g_fixsub" style="display: block;"><div>
+                                    <ul>
+                                        <li class="on"><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=11">국내 발생 현황</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=14">국외 발생 현황</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=13">시도별 발생동향</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=12">확진환자 이동경로</a></li>
+                                    </ul>
+                                </div></div>                             
+                            </li>
+                            <li><a href="http://ncov.mohw.go.kr/tcmBoardList.do?brdId=3&amp;brdGubun=">뉴스 &amp; 이슈</a>
+                                <div class="g_fixsub" style="display: none;"><div>
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/tcmBoardList.do?brdId=3&amp;brdGubun=">보도자료</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/factBoardList.do?brdId=3&amp;brdGubun=33">코로나19 팩트 &amp; 이슈체크</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/maskBoardList.do?brdId=3&amp;brdGubun=36">공적마스크 공급현황</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/lastBannerList.do?brdId=3&amp;brdGubun=39">일별 브리핑 이슈 모아보기</a></li>
+                                                                                
+                                    </ul>
+                                </div></div>
+                            </li>                            
+                            <li><a href="http://ncov.mohw.go.kr/infoBoardList.do?brdId=3&amp;brdGubun=32">홍보자료 &amp; FAQ</a>
+                                <div class="g_fixsub" style="display: none;"><div>
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/infoBoardList.do?brdId=3&amp;brdGubun=32">홍보자료</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/faqBoardList.do?brdId=3&amp;brdGubun=38">FAQ</a></li>
+                                    </ul>
+                                </div></div>
+                            </li>
+                            <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=51">피해지원정책</a>
+                                <div class="g_fixsub" style="display: none;"><div>
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=51">일반인(대국민)</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=52">취약계층</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=53">소상공인 및 기업</a></li>
+                            			<li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=54">의료기관</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=55">발생지역</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=56">기타</a></li>                                       
+                                    </ul>
+                                </div></div>
+                            </li>                            
+                            <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=21">공지사항</a>
+                                <div class="g_fixsub" style="display: none;"><div>
+                                    <ul>
+                                    	<li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=21">일반인</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=23">입국자 및 해외여행객</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=22">자가격리자</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=24">의료기관</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=25">집단 및 다중이용시설</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=28">지자체</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=26">기업 및 시장</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=29">지역별 사회적 거리 두기 단계</a></li>
+                                    </ul>
+                                </div></div>
+                            </li>
+                            <li><a href="http://ncov.mohw.go.kr/socdisBoardView.do?brdId=6&amp;brdGubun=1">사회적 거리 두기</a>
+                                <div class="g_fixsub" style="display: none;"><div>
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/socdisBoardView.do?brdId=6&amp;brdGubun=1">거리 두기 체계 개요</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=64&amp;dataGubun=641">단계별 실행방안</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=65&amp;dataGubun=651">주요 시설·활동 조치사항</a></li>                                                                                 
+                                    	<li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=66">생활 속 거리 두기 기본수칙</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=67">생활 속 거리 두기 세부지침</a></li>   
+                                        <li><a href="http://ncov.mohw.go.kr/regSocdisBoardView.do?brdId=6&amp;brdGubun=68&amp;ncvContSeq=495">지역별 거리 두기 단계 현황</a></li>   
+                                    </ul>
+                                </div></div>
+                            </li>
+                            <!-- 
+                            <li ><a href="/socdisBoardList.do?brdId=6&brdGubun=66">생활 속 거리 두기 수칙</a>
+                                <div class="g_fixsub"><div>
+                                    <ul>
+                                        <li ><a href="/socdisBoardList.do?brdId=6&brdGubun=66">기본수칙</a></li>
+                                        <li ><a href="/socdisBoardList.do?brdId=6&brdGubun=67">세부지침</a></li>                                                                           
+                                    </ul>
+                                </div></div>
+                            </li>
+                            
+                             
+                             <li ><a href="/guidelineList.do?brdId=6&brdGubun=61&dataGubun=611">생활 속 거리 두기</a>
+                                <div class="g_fixsub"><div>
+                                    <ul>
+                                        <li ><a href="/guidelineList.do?brdId=6&brdGubun=61&dataGubun=611">기본 수칙</a></li>
+                                        <li ><a href="/guidelineList.do?brdId=6&brdGubun=63&dataGubun=631">공동체 수칙</a></li>
+                                        <li ><a href="/guidelineList.do?brdId=6&brdGubun=62">장소별 실천수칙</a></li>                                                                                 
+                                    </ul>
+                                </div></div>
+                            </li>
+                            -->
+                            <li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=71">마스크 착용</a>
+                                <div class="g_fixsub" style="display: none;"><div>
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=71">지침·제도</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=72">FAQ</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=73">홍보자료</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=74">시도별 현황</a> </li>
+                                    </ul>
+                                <div></div>
+                            </div></div></li>                            
+                        </ul>
+					</div>
+					
+					<!--20200221 검색추가 시작-->
+					<div class="p_search">
+						<form id="searchForm1" name="searchForm" action="http://ncov.mohw.go.kr/search/search.jsp" method="post">
+							<input type="hidden" id="pageNum" name="pageNum" value="1">					<!-- 현재페이지 -->
+							<input type="hidden" id="searchTab" name="searchTab" value="TOTAL">				<!-- 검색탭 -->
+							<input type="hidden" id="order" name="order" value="weight">							<!-- 정렬 -->
+							<input type="hidden" id="sDate" name="sDate" value="">							<!-- 시작일자 -->
+							<input type="hidden" id="eDate" name="eDate" value="">							<!-- 시작일자 -->
+							<input type="hidden" id="searchRange" name="searchRange" value="total">		<!-- 검색범위 -->
+							<input type="hidden" id="dateRange" name="dateRange" value="all">				<!-- 등록범위 -->
+							<div class="n_search">
+								<label for="searchTerm" class="hdn">검색어</label>
+								<input type="text" name="searchTerm" id="searchTerm" value="" placeholder="검색어를 입력하세요.">
+								<input type="submit" class="btn_search" onclick="search( &#39;searchForm1&#39; );"><span class="hdn">검색</span>
+							</div>
+						</form>	
+					</div>
+					<!--20200221 검색추가 끝//-->
+					<!--20200221 검색추가(tablet, mobile) 추가-->
+					<a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=" class="btn_global_search"><span class="hdn">통합검색</span><i></i></a>
+					<div class="global_search">
+						<form id="searchForm2" name="searchForm" action="http://ncov.mohw.go.kr/search/search.jsp" method="post">
+							<input type="hidden" id="pageNum" name="pageNum" value="1">					<!-- 현재페이지 -->
+							<input type="hidden" id="searchTab" name="searchTab" value="TOTAL">				<!-- 검색탭 -->
+							<input type="hidden" id="order" name="order" value="weight">							<!-- 정렬 -->
+							<input type="hidden" id="sDate" name="sDate" value="">							<!-- 시작일자 -->
+							<input type="hidden" id="eDate" name="eDate" value="">							<!-- 시작일자 -->
+							<input type="hidden" id="searchRange" name="searchRange" value="total">		<!-- 검색범위 -->
+							<input type="hidden" id="dateRange" name="dateRange" value="all">				<!-- 등록범위 -->
+							<div class="n_search">
+								<label for="searchTerm" class="hdn">검색어</label>
+								<input type="text" name="searchTerm" id="searchTerm" value="" placeholder="검색어를 입력하세요.">
+								<input type="submit" class="btn_search" onclick="search( &#39;searchForm2&#39; );"><span class="hdn">검색</span>
+							</div>
+						</form>	
+						<a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=" class="btn_close"><span class="hdn">통합검색닫기</span></a>
+					</div>
+					<!--20200221 검색추가 추가 끝//-->
+										
+					<a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=" class="btn_global_menu"><span class="hdn">전체메뉴</span><i></i></a>	
+				</div>
+			</div>
+		</div>
+
+		<div class="global_menu">
+			<div>
+				<div class="gm_title">
+					<div class="gmt_p">
+						<span>전체메뉴</span>
+					</div>
+					<div class="gmt_tm">
+						<div class="gmtt_b">
+							<div class="gmt_site">
+								<ul>
+									<li><a href="http://ncov.mohw.go.kr/">홈</a></li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="gm_content">
+					<div>
+                        <ul>
+                            <li><a class="gmc_title">바로알기</a>
+	                            <div class="gmc_list">
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/baroView.do?brdId=4&amp;brdGubun=41">코로나19 란? </a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/baroView2.do?brdId=4&amp;brdGubun=42">대한민국 방역체계</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/baroView3.do?brdId=4&amp;brdGubun=43">환자치료 및 관리</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/baroView4.do?brdId=4&amp;brdGubun=44">예방 조치 안내</a></li>
+                                    </ul>	                            
+	                            </div>                             
+                            </li>
+                            <li class="open"><a class="gmc_title">발생동향</a>
+	                            <div class="gmc_list">
+                                    <ul>
+                                        <li class="on"><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=11">국내 발생 현황</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=14">국외 발생 현황</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=13">시도별 발생동향</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=12">확진환자 이동경로</a></li>
+                                    </ul>	                            
+	                            </div>                            
+                            </li>                            
+                            <li><a class="gmc_title">뉴스 &amp; 이슈</a>
+                                <div class="gmc_list">
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/tcmBoardList.do?brdId=3&amp;brdGubun=">보도자료</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/factBoardList.do?brdId=3&amp;brdGubun=33">코로나19 팩트 &amp; 이슈체크</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/maskBoardList.do?brdId=3&amp;brdGubun=36">공적마스크 공급현황</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/lastBannerList.do?brdId=3&amp;brdGubun=39">일별 브리핑 이슈 모아보기</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a class="gmc_title">홍보자료 &amp; FAQ</a>
+                                <div class="gmc_list">
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/infoBoardList.do?brdId=3&amp;brdGubun=32">홍보자료</a></li>                                        
+                                        <li><a href="http://ncov.mohw.go.kr/faqBoardList.do?brdId=3&amp;brdGubun=38">FAQ</a></li>                                        
+                                    </ul>
+                                </div>
+                            </li>                                                                 
+                            <li><a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=" class="gmc_title">피해지원정책</a>
+                                <div class="gmc_list">
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=51">일반인(대국민)</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=52">취약계층</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=53">소상공인 및 기업</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=54">의료기관</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=55">발생지역</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=56">기타</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=" class="gmc_title">공지사항</a>
+                                <div class="gmc_list">
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=21">일반인</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=23">입국자 및 해외여행객</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=22">자가격리자</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=24">의료기관</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=25">집단 및 다중이용시설</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=28">지자체</a></li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=26">기업 및 시장</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=29">지역별 사회적 거리 두기 단계</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=" class="gmc_title">사회적 거리 두기 </a>
+                                <div class="gmc_list">
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/socdisBoardView.do?brdId=6&amp;brdGubun=1">거리 두기 체계 개요</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=64&amp;dataGubun=641">단계별 실행방안</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=65&amp;dataGubun=651">주요 시설·활동 조치사항</a> </li>
+                                    	<li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=66">생활 속 거리 두기 기본수칙</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=67">생활 속 거리 두기 세부지침</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/regSocdisBoardView.do?brdId=6&amp;brdGubun=68&amp;ncvContSeq=495">지역별 거리 두기 단계 현황</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- 
+                            <li  ><a href="" class="gmc_title">생활 속 거리 두기 수칙 </a>
+                                <div class="gmc_list">
+                                    <ul>
+                                        <li  ><a href="/socdisBoardList.do?brdId=6&brdGubun=66">기본 수칙</a> </li>
+                                        <li  ><a href="/socdisBoardList.do?brdId=6&brdGubun=67">세부지침</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                             
+							
+                             <li  ><a href="" class="gmc_title">생활 속 거리 두기 </a>
+                                <div class="gmc_list">
+                                    <ul>
+                                        <li  ><a href="/guidelineList.do?brdId=6&brdGubun=61&dataGubun=611">기본 수칙</a> </li>
+                                        <li  ><a href="/guidelineList.do?brdId=6&brdGubun=63&dataGubun=631">공동체 수칙</a> </li>
+                                        <li  ><a href="/guidelineList.do?brdId=6&brdGubun=62">장소별 실천 수칙</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            -->
+                            <li><a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=" class="gmc_title">마스크 착용</a>
+                                <div class="gmc_list">
+                                    <ul>
+                                        <li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=71">지침·제도</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=72">FAQ</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=73">홍보자료</a> </li>
+                                        <li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=74">시도별 현황</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+					</div>
+				</div>
+				<a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=" class="btn_close"><span class="hdn">전체메뉴닫기</span></a>
+			</div>
+		</div>
+		
+		<div class="subm_fix">
+			<div class="cnt4-3-2  ">
+				<ul>
+					<li><a href="http://ncov.mohw.go.kr/baroView.do?brdId=4&amp;brdGubun=41"><span>코로나19 란?</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/baroView2.do?brdId=4&amp;brdGubun=42"><span>대한민국 방역체계</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/baroView3.do?brdId=4&amp;brdGubun=43"><span>환자치료 및 관리</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/baroView4.do?brdId=4&amp;brdGubun=44"><span>예방 조치 안내</span></a></li>
+				</ul>
+			</div>
+			<div class="cnt4-3-2 open ">
+				<ul>
+					<li class="on"><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=11"><span>국내 발생 현황</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=14"><span>국외 발생 현황</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=13"><span>시도별 발생동향</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/bdBoardList.do?brdId=1&amp;brdGubun=12"><span>확진환자 이동경로</span></a></li>
+				</ul>
+			</div>
+			<div class="cnt4-2-1  ">
+				<ul>
+					<li><a href="http://ncov.mohw.go.kr/tcmBoardList.do?brdId=3&amp;brdGubun="><span>보도자료</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/factBoardList.do?brdId=3&amp;brdGubun=33"><span>코로나19 팩트 &amp; 이슈체크</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/maskBoardList.do?brdId=3&amp;brdGubun=36"><span>공적마스크 공급현황</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/lastBannerList.do?brdId=3&amp;brdGubun=39"><span>일별 브리핑 이슈 모아보기</span></a></li>
+				</ul>
+			</div>
+			<div class="cnt2-2-2  ">
+				<ul>
+					<li><a href="http://ncov.mohw.go.kr/infoBoardList.do?brdId=3&amp;brdGubun=32"><span>홍보자료</span></a></li>                                        
+					<li><a href="http://ncov.mohw.go.kr/faqBoardList.do?brdId=3&amp;brdGubun=38"><span>FAQ</span></a></li> 
+				</ul>
+			</div>
+			<div class="cnt3-3-2  ">
+				<ul>
+					<li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=51"><span>일반인(대국민)</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=52"><span>취약계층</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=53"><span>소상공인 및 기업</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=54"><span>의료기관</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=55"><span>발생지역</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/supportPolicyBoardList.do?brdId=5&amp;brdGubun=56"><span>기타</span></a> </li>
+				</ul>
+			</div>
+			<div class="cnt3-3-2  ">
+				<ul>
+					<li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=21"><span>일반인</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=23"><span>입국자 및 해외여행객</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=22"><span>자가격리자</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=24"><span>의료기관</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=25"><span>집단 및 다중이용시설</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=28"><span>지자체</span></a></li>
+					<li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=26"><span>기업 및 시장</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/duBoardList.do?brdId=2&amp;brdGubun=29"><span>지역별 사회적 거리 두기 단계</span></a> </li>
+				</ul>
+			</div>
+			<div class="cnt3-3-2  ">
+				<ul>
+					<li><a href="http://ncov.mohw.go.kr/socdisBoardView.do?brdId=6&amp;brdGubun=1"><span>거리 두기 체계 개요</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=64&amp;dataGubun=641"><span>단계별 실행방안</span></a> </li>	
+					<li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=65&amp;dataGubun=651"><span>주요 시설·활동 조치사항</span></a> </li>				
+					<li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=66"><span>생활 속 거리 두기 기본수칙</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&amp;brdGubun=67"><span>생활 속 거리 두기 세부지침</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/regSocdisBoardView.do?brdId=6&amp;brdGubun=68&amp;ncvContSeq=495"><span>지역별 거리 두기 단계 현황</span></a> </li>
+				</ul>
+			</div>
+			<!-- 
+			<div class="cnt3-3-2  ">
+				<ul>
+					<li ><a href="/socdisBoardList.do?brdId=6&brdGubun=66"><span>기본 수칙</span></a> </li>
+					<li ><a href="/socdisBoardList.do?brdId=6&brdGubun=67"><span>세부지침</span></a> </li>			
+				</ul>
+			</div>
+			
+			 <div class="cnt3-3-2  ">
+				<ul>
+					<li ><a href="/guidelineList.do?brdId=6&brdGubun=61&dataGubun=611"><span>기본 수칙</span></a> </li>
+					<li ><a href="/guidelineList.do?brdId=6&brdGubun=63&dataGubun=631"><span>공동체 수칙</span></a> </li>
+					<li ><a href="/guidelineList.do?brdId=6&brdGubun=62"><span>장소별 실천 수칙</span></a> </li>					
+				</ul>
+			</div>
+			 -->
+			<div class="cnt4-4-2  ">
+				<ul>
+					<li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=71"><span>지침·제도</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=72"><span>FAQ</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=73"><span>홍보자료</span></a> </li>
+					<li><a href="http://ncov.mohw.go.kr/maskDutyBoardList.do?brdId=7&amp;brdGubun=74"><span>시도별 현황</span></a> </li>
+				</ul>
+			</div>
+		</div>	
+		
+
+
+<script type="text/javaScript" language="javascript">
+
+function fn_search(pageNo){
+	$("#pageIndex").val(pageNo);
+	fn_submit();
+}
+
+function fn_submit(){
+	var frm = $("#form1");
+	frm.attr("action", "/bdBoardList.do");
+	frm.submit();
+}
+
+
+</script>
+
+<form name="form1" id="form1" method="post">
+<input name="pageIndex" id="pageIndex" type="hidden" value="">
+<input type="hidden" id="ncv_file_seq" name="ncv_file_seq" value="">
+<input type="hidden" id="file_path" name="file_path" value="">
+<input type="hidden" id="file_name" name="file_name" value="">
+
+<input type="hidden" id="brdId" name="brdId" value="1">
+<input type="hidden" id="brdGubun" name="brdGubun" value="11">
+
+<div class="container"><!-- main_container -->
+			<div>
+				<div id="content" class="content">
+					<div>
+
+					<div class="sub_top">
+                            <div class="st_navigation">
+                                <ul>
+                                    <li><a href="http://ncov.mohw.go.kr/"><span class="hdn">홈</span></a></li>
+                                    <li><a href="javascript:void(0);" onclick="javascript:fn_goMenu(&#39;/bdBoardList.do&#39;, &#39;1&#39;, &#39;11&#39;, &#39;&#39;);">발생동향</a></li>
+                                     <li><a href="javascript:void(0);" onclick="javascript:fn_goMenu(&#39;/bdBoardList.do&#39;, &#39;1&#39;, &#39;11&#39;, &#39;&#39;);">국내 발생 현황</a></li>
+                                </ul>
+                            </div>
+                            <div class="st_title">
+                                <div class="fl_l">
+                                    <h3>국내 발생 현황</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- s: content -->                          
+                        <h4 class="s_title_in2">국내 발생 현황</h4>                        
+                        <p class="s_descript">코로나바이러스감염증-19 국내 발생현황</p>
+                        
+                        <h5 class="s_title_in3">누적 확진자 현황 <span class="t_date">(6.5. 00시 기준)</span></h5>
+						<div class="caseTable">
+							<div>
+								<strong class="ca_top">확진환자</strong>
+								<ul class="ca_body">
+									<li>
+										<dl>
+											<dt class="ca_subtit">누적</dt>
+											<dd class="ca_value">143,596</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="ca_subtit">전일대비</dt>
+											<dd class="ca_value">
+												<ul>
+													<li>
+														<strong class="inner_tit sum">소계</strong>
+														<p class="inner_value">+ 744</p>
+													</li>
+													<li>
+														<strong class="inner_tit">국내발생</strong>
+														<p class="inner_value">725</p>
+													</li>
+													<li>
+														<strong class="inner_tit">해외유입</strong>
+														<p class="inner_value">19</p>
+													</li>
+												</ul>
+											</dd>
+										</dl>
+									</li>
+								</ul>	
+							</div>
+							<div>
+								<strong class="ca_top">격리해제</strong>
+								<ul class="ca_body">
+									<li>
+										<dl>
+											<dt class="ca_subtit">누적</dt>
+											<dd class="ca_value">133,763</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="ca_subtit">전일대비</dt>
+											<dd class="ca_value">
+												<span class="txt_ntc">+ 474</span>
+											</dd>
+										</dl>
+									</li>
+								</ul>	
+							</div>
+							<div>
+								<strong class="ca_top">격리중</strong>
+								<ul class="ca_body">
+									<li>
+										<dl>
+											<dt class="ca_subtit">누적</dt>
+											<dd class="ca_value">7,862</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="ca_subtit">전일대비</dt>
+											<dd class="ca_value">
+												<span class="txt_ntc">+ 268</span>
+											</dd>
+										</dl>
+									</li>
+								</ul>	
+							</div>
+							<div>
+								<strong class="ca_top">사망</strong>
+								<ul class="ca_body">
+									<li>
+										<dl>
+											<dt class="ca_subtit">누적</dt>
+											<dd class="ca_value">1,971</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="ca_subtit">전일대비</dt>
+											<dd class="ca_value">
+												<span class="txt_ntc">+ 2</span>
+											</dd>
+										</dl>
+									</li>
+								</ul>	
+							</div>
+						</div>                        
+                        
+                        
+                        <!--20200415 추가 시작-->
+                        <h5 class="s_title_in3">해외유입 환자현황 <span class="t_date">(6.4 00시 기준)</span></h5>						
+						<div class="data_table mgt16">
+						  <table class="num">
+							<caption><span class="hdn">해외유입 환자현황표 - 구분, 합계, 유입국가(중국, 중국외 아시아, 유럽, 미주, 아프리카), 확인단계(검역 단계, 지역사회), 국적(내국인, 외국인)으로 구성</span></caption>
+							<colgroup>
+								<col style="width:25%;">
+								<col style="width:25%;">
+								<col style="width:16.666%;">
+								<col style="width:16.666%;">
+								<col style="width:16.666%;">
+							</colgroup>
+							<thead>
+							<tr>
+							  <th scope="col" colspan="2">구분</th>
+							  <th scope="col">신규</th>
+							  <th scope="col">누계</th>
+							  <th scope="col">(비율)</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr class="sumline">
+								  <th scope="row" colspan="2">합계</th>
+							  
+					          
+								  <td>21</td>
+								  <td colspan="2">9,116</td>
+							  
+							  
+								</tr>
+							  
+					          
+								<tr>
+								
+								  <th scope="row" rowspan="6">유입국가</th>
+								
+								  <th scope="row">중국</th>
+								  <td>1</td>
+								  <td>77</td>
+								  <td>(0.8%)</td>
+								</tr>
+							 
+								<tr>
+								
+								  <th scope="row">중국외아시아</th>
+								  <td>15</td>
+								  <td>4,401</td>
+								  <td>(48.3%)</td>
+								</tr>
+							 
+								<tr>
+								
+								  <th scope="row">유럽</th>
+								  <td>2</td>
+								  <td>1,512</td>
+								  <td>(16.6%)</td>
+								</tr>
+							 
+								<tr>
+								
+								  <th scope="row">미주</th>
+								  <td>3</td>
+								  <td>2,649</td>
+								  <td>(29.1%)</td>
+								</tr>
+							 
+								<tr>
+								
+								  <th scope="row">아프리카</th>
+								  <td>0</td>
+								  <td>450</td>
+								  <td>(4.9%)</td>
+								</tr>
+							 
+								<tr>
+								
+								  <th scope="row">호주</th>
+								  <td>0</td>
+								  <td>27</td>
+								  <td>(0.3%)</td>
+								</tr>
+							 
+							 
+							 
+					         						
+								<tr>
+								
+								  <th scope="row" rowspan="2">확인단계</th>
+								
+								  <th scope="row">검역단계</th>
+								  <td>8</td>
+								  <td>3,868</td>
+								  <td>(42.4%)</td>
+								</tr>
+													
+								<tr>
+								
+								  <th scope="row">지역사회</th>
+								  <td>13</td>
+								  <td>5,248</td>
+								  <td>(57.6%)</td>
+								</tr>
+							
+							
+							
+					         						
+								<tr>
+								
+								  <th scope="row" rowspan="2">국적</th>
+								
+								 <th scope="row">내국인</th>
+								  <td>11</td>
+								  <td>4,799</td>
+								  <td>(52.6%)</td>
+								</tr>
+													
+								<tr>
+								
+								 <th scope="row">외국인</th>
+								  <td>10</td>
+								  <td>4,317</td>
+								  <td>(47.4%)</td>
+								</tr>
+							
+								
+							</tbody>
+						  </table>
+						</div>                        
+                        <!-- 20200415 추가 끝// -->
+                        
+                        <h5 class="s_title_in3">누적 검사현황 <span class="t_date">(6.5. 00시 기준)</span></h5>
+                        <div class="data_table mgt16 mini">
+	                        <table class="num minisize">
+	                            <caption><span class="hdn">누적 검사현황 - 검사완료(확진환자수 (격리중, 격리해제, 사망, 소계), 결과음성, 소계), 검사중, 합계로 구성</span></caption>
+	                            <colgroup>
+	                            	<col style="width:12.5%">
+	                            	<col style="width:12.5%">
+	                            	<col style="width:10%">
+	                            	<col style="width:12.5%">
+	                            	<col style="width:12.5%">
+	                            	<col style="width:12.5%">
+	                            	<col style="width:12.5%">
+	                            	<col style="width:15%">                                
+	                            </colgroup>
+	                            <thead>
+	                            	<tr>
+	                                	<th colspan="6">검사완료</th>
+	                                    <th rowspan="3">검사중</th>
+	                                    <th rowspan="3">합계</th>
+	                                </tr>
+	                                <tr>
+	                                	<th colspan="4">확진환자수</th>
+	                                    <th rowspan="2">결과<br>음성</th>
+	                                    <th rowspan="2">소계</th>
+	                                </tr>
+	                                <tr>
+	                                	<th>격리중</th>
+	                                    <th>격리해제</th>
+	                                    <th>사망</th>
+	                                    <th>소계</th>
+	                                </tr>
+	                            </thead>
+	                            <tbody>
+	                            	<tr>
+	                                	<td>7,862</td>
+	                                	<td>133,763</td>
+	                                	<td>1,971</td>
+	                                	<td>143,596</td>
+	                                	<td>9,665,194</td>
+	                                	<td>9,808,790</td>
+	                                	<td>137,164</td>
+	                                	<td>9,945,954</td>
+	                                </tr>
+	                            </tbody>
+	                         </table>    
+                        </div>                        
+                        
+                        <div class="liveMoveChart mgt16">
+                        	<div>
+                        		<div class="title"><h6 class="s_title_in3">확진환자 지역별 비율 <span class="t_date">(6.5 00시 기준)</span></h6></div>
+                        		
+                        		<div class="c_chart c_chart_rpr_B">
+									<div class="cc_graph"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+										<canvas id="regional_patient_ratio_B" style="display: block; height: 220px; width: 558px;" width="1116" height="440" class="chartjs-render-monitor"></canvas>
+									</div>
+								</div>
+                        	</div>
+                        	<div>
+                        		<div class="title"><h6 class="s_title_in3">최근 2주간 감염경로별 확진자 비율 <span class="t_date">(6.4. 00시 기준)</span></h6></div>
+                        		                       		
+                        		<div class="c_chart c_chart_gir">
+									<div class="cc_graph"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+										<canvas id="group_incidence_ratio" width="1116" height="440" style="display: block; height: 220px; width: 558px;" class="chartjs-render-monitor"></canvas>
+									</div>
+								</div>
+                        	</div>                        	
+                        </div>
+                        
+                        <!--20210405 추가  일일 검사 현황 S--> 
+                        <h5 class="s_title_in3">일일 검사 현황 <span class="t_date">(6.5. 00시 기준)</span></h5>
+                        <div class="data_table mgt16">
+                        	<table class="num">
+                        		<caption><span class="hdn">일일검사현황 - 의심신고 검사자 수, 임시 선별 검사 건수, 합로 구성</span></caption>
+								<colgroup>
+									
+									<col style="width:33.333%;">
+									<col style="width:33.333%;">
+									<col style="width:33.333%;">
+								</colgroup>
+                        		<thead>
+									<tr>
+										<th scope="col">의심신고 검사자 수</th>
+										<th scope="col">임시 선별 검사 건수</th>
+										<th scope="col">합계</th>
+									</tr>
+                        		</thead>
+                        		<tbody>
+									<tr>
+										<td><span>34,630</span></td>
+										<td><span>41,943</span></td>
+										<td><span class="txt_clr_nh">76,573</span></td>
+									</tr>	
+                        		</tbody>
+                        	</table>
+						</div>                        
+                        <!--//일일 검사 현황 E -->
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+						
+						<h5 class="s_title_in3">감염경로구분에 따른 신규확진자 현황</h5>
+                        <div class="c_chart c_chart_dp">
+				            <div class="cc_graph"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+				                <canvas id="daily_patient" width="2360" height="912" style="display: block; height: 456px; width: 1180px;" class="chartjs-render-monitor"></canvas>
+				                <div class="axis_label">
+									<div class="al_y_l"><em>(명)</em></div>
+								</div>
+				            </div>
+				        </div>
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+						
+						<h5 class="s_title_in3">일일 및 누적 확진환자 추세</h5>
+						<!-- <div class="live_cpChart">
+							<div class="live_pdata1">
+								<div class="box_image"></div>				
+							</div>						
+						</div> -->
+						
+						<div class="c_chart c_chart_pt">
+							<div class="cc_graph"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+								<canvas id="patient_trend" width="2360" height="590" style="display: block; height: 295px; width: 1180px;" class="chartjs-render-monitor"></canvas>
+								<div class="axis_label">
+									<div class="al_y_l"><span class="cca_total">누적 확진환자</span><em>(명)</em></div>
+									<div class="al_y_r"><span class="cca_day">일 확진환자</span><em>(명)</em></div>
+								</div>
+							</div>
+							<div class="cc_legend">
+								<div class="ccl_total"><i></i><span>누적 확진환자</span></div>
+								<div class="ccl_day"><i></i><span>일 확진환자</span></div>
+							</div>
+						</div>
+						
+                        <div class="hdn">
+                        	<table>
+                        		<caption>일일 및 누적확진환자 추세 - 날짜, 누적확진환자, 일일확진환자 수로 구성</caption>
+                        		<thead>
+                        			<tr><th scope="col">날짜</th><th scope="col">누적 확진환자수</th><th scope="col">일일 확진환자수</th></tr>
+                        		</thead>
+                        		<tbody>
+                        		
+									
+										
+									
+										
+											<tr><td>20210530</td><td>139910</td><td>479</td></tr>
+										
+									
+										
+											<tr><td>20210531</td><td>140340</td><td>430</td></tr>
+										
+									
+										
+											<tr><td>20210601</td><td>140799</td><td>459</td></tr>
+										
+									
+										
+											<tr><td>20210602</td><td>141476</td><td>677</td></tr>
+										
+									
+										
+											<tr><td>20210603</td><td>142157</td><td>681</td></tr>
+										
+									
+										
+											<tr><td>20210604</td><td>142852</td><td>695</td></tr>
+										
+									
+										
+											<tr><td>20210605</td><td>143596</td><td>744</td></tr>
+										
+									
+								
+                        		</tbody>
+                        	</table>
+                        </div>
+
+						<h5 class="s_title_in3 mgt24">확진환자 내 일일 및 누적 격리해제 추세</h5>
+						<!-- <div class="live_cpChart">
+							<div class="live_pdata2">
+								<div class="box_image"></div>					
+							</div>							
+						</div> -->
+						
+						<div class="c_chart c_chart_ct">
+							<div class="cc_graph"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+								<canvas id="complete_trend" width="2360" height="590" style="display: block; height: 295px; width: 1180px;" class="chartjs-render-monitor"></canvas>
+								<div class="axis_label">
+									<div class="al_y_l"><span class="cca_total">누적 격리해제</span><em>(명)</em></div>
+									<div class="al_y_r"><span class="cca_day">일 격리해제</span><em>(명)</em></div>
+								</div>
+							</div>
+							<div class="cc_legend">
+								<div class="ccl_total"><i></i><span>누적 격리해제</span></div>
+								<div class="ccl_day"><i></i><span>일 격리해제</span></div>
+							</div>
+						</div>
+						
+                        <div class="hdn">
+                        	<table>
+                        		<caption>확진환자 내 일일 및 누적 격리해제 추세 - 날짜, 누적확진환자, 일일확진환자 수로 구성</caption>
+                        		<thead>
+                        			<tr><th scope="col">날짜</th><th scope="col">누적 격리해제</th><th scope="col">일일 격리해제</th></tr>
+                        		</thead>
+                        		<tbody>
+                        			
+									
+										
+									
+										
+											<tr><td>20210530</td><td>130381</td><td>642</td></tr>
+										
+									
+										
+											<tr><td>20210531</td><td>130823</td><td>442</td></tr>
+										
+									
+										
+											<tr><td>20210601</td><td>131463</td><td>640</td></tr>
+										
+									
+										
+											<tr><td>20210602</td><td>132068</td><td>605</td></tr>
+										
+									
+										
+											<tr><td>20210603</td><td>132699</td><td>631</td></tr>
+										
+									
+										
+											<tr><td>20210604</td><td>133289</td><td>590</td></tr>
+										
+									
+										
+											<tr><td>20210605</td><td>133763</td><td>474</td></tr>
+										
+									
+										
+                        		</tbody>
+                        	</table>
+                        </div>
+                        
+                        <div class="board_top mgt16">							
+							<div class="fl_l">
+								<h5 class="s_title_in3">확진자 성별 현황<span class="title_info">(6.4 00시 기준)</span></h5>
+							</div>
+						</div>
+						<div class="data_table">
+                        	<table class="num">
+                        		<caption><span class="hdn">확진자 성별현황 - 구분, 확진자(%), 사망자(%), 치명률(%) 로 구성</span></caption>
+								<colgroup>
+									<col style="width:20%;">
+									<col style="width:26.666%;">
+									<col style="width:26.666%;">
+									<col style="width:26.666%;">
+								</colgroup>
+                        		<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">확진자(%)</th>
+										<th scope="col">사망자(%)</th>
+										<th scope="col">치명률(%)</th>
+									</tr>
+                        		</thead>
+                        		<tbody>
+                       			
+								
+									<tr>
+										<th scope="row">남성</th>
+										<td><span>71,544</span>&nbsp;<span class="txt_clr_nh">(50.08)</span></td>
+										<td><span>974</span>&nbsp;<span class="txt_clr_nh">(49.47)</span></td>
+										<td><span class="txt_clr_nh">1.36</span></td>
+									</tr>	
+								
+									<tr>
+										<th scope="row">여성</th>
+										<td><span>71,308</span>&nbsp;<span class="txt_clr_nh">(49.92)</span></td>
+										<td><span>995</span>&nbsp;<span class="txt_clr_nh">(50.53)</span></td>
+										<td><span class="txt_clr_nh">1.4</span></td>
+									</tr>	
+								
+																
+                        		</tbody>
+                        	</table>
+						</div>
+
+						<p class="i_descript mgt8 ta_r"><span class="txt_ntc_bold">*</span>  치명률 = 사망자수 / 확진자수 × 100</p>
+
+                        <div class="board_top mgt16">							
+							<div class="fl_l">
+								<h5 class="s_title_in3">확진자 연령별 현황<span class="title_info">(6.4 00시 기준 )</span></h5>
+							</div>
+						</div>
+						<div class="data_table">
+                        	<table class="num">
+                        		<caption><span class="hdn">확진자 연령별 현황 - 구분, 확진자(%), 사망자(%), 치명률(%) 로 구성</span></caption>
+								<colgroup>
+									<col style="width:20%;">
+									<col style="width:26.666%;">
+									<col style="width:26.666%;">
+									<col style="width:26.666%;">
+								</colgroup>
+                        		<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">확진자(%)</th>
+										<th scope="col">사망자(%)</th>
+										<th scope="col">치명률(%)</th>
+									</tr>
+                        		</thead>
+                        		<tbody>
+                        		
+								
+									<tr><th scope="row">80 이상</th><td><span>5,768</span>&nbsp;<span class="txt_clr_nh">(4.04)</span></td><td><span>1,086</span>&nbsp;<span class="txt_clr_nh">(55.15)</span></td><td><span class="txt_clr_nh">18.83</span></td></tr>
+								
+									<tr><th scope="row">70-79</th><td><span>9,898</span>&nbsp;<span class="txt_clr_nh">(6.93)</span></td><td><span>557</span>&nbsp;<span class="txt_clr_nh">(28.29)</span></td><td><span class="txt_clr_nh">5.63</span></td></tr>
+								
+									<tr><th scope="row">60-69</th><td><span>21,590</span>&nbsp;<span class="txt_clr_nh">(15.11)</span></td><td><span>230</span>&nbsp;<span class="txt_clr_nh">(11.68)</span></td><td><span class="txt_clr_nh">1.07</span></td></tr>
+								
+									<tr><th scope="row">50-59</th><td><span>26,295</span>&nbsp;<span class="txt_clr_nh">(18.41)</span></td><td><span>70</span>&nbsp;<span class="txt_clr_nh">(3.56)</span></td><td><span class="txt_clr_nh">0.27</span></td></tr>
+								
+									<tr><th scope="row">40-49</th><td><span>21,590</span>&nbsp;<span class="txt_clr_nh">(15.11)</span></td><td><span>15</span>&nbsp;<span class="txt_clr_nh">(0.76)</span></td><td><span class="txt_clr_nh">0.07</span></td></tr>
+								
+									<tr><th scope="row">30-39</th><td><span>19,693</span>&nbsp;<span class="txt_clr_nh">(13.79)</span></td><td><span>8</span>&nbsp;<span class="txt_clr_nh">(0.41)</span></td><td><span class="txt_clr_nh">0.04</span></td></tr>
+								
+									<tr><th scope="row">20-29</th><td><span>21,481</span>&nbsp;<span class="txt_clr_nh">(15.04)</span></td><td><span>3</span>&nbsp;<span class="txt_clr_nh">(0.15)</span></td><td><span class="txt_clr_nh">0.01</span></td></tr>
+								
+									<tr><th scope="row">10-19</th><td><span>10,216</span>&nbsp;<span class="txt_clr_nh">(7.15)</span></td><td><span>0</span>&nbsp;<span class="txt_clr_nh">(0.00)</span></td><td><span class="txt_clr_nh">-</span></td></tr>
+								
+									<tr><th scope="row">0-9</th><td><span>6,321</span>&nbsp;<span class="txt_clr_nh">(4.42)</span></td><td><span>0</span>&nbsp;<span class="txt_clr_nh">(0.00)</span></td><td><span class="txt_clr_nh">-</span></td></tr>
+								
+									
+                        		</tbody>
+                        	</table>
+						</div>
+						<p class="i_descript mgt8 ta_r"><span class="txt_ntc_bold">*</span>  치명률 = 사망자수 / 확진자수 × 100</p>
+												
+						<!-- 공공누리 표시 -->
+						
+
+
+
+
+
+	
+	
+	
+	
+	
+		
+	
+	
+	
+			
+			
+	
+	
+	
+
+
+<div class="copykogl
+	
+		 type1
+		
+		
+		
+		
+	">
+	<div class="copyimg">
+		
+			<span class="hdn">공공누리 제1유형</span>
+			
+			
+			
+			
+			
+	</div>
+	<p class="copytext">
+		<strong>"국내 발생 현황"</strong> 
+		저작물은
+		
+			 공공누리의 <strong>제1유형 (출처표시, 상업적 이용가능, 변경 가능)</strong>
+			
+			
+			
+			
+		
+		
+			
+			
+				에 따라 이용할 수 있습니다.<br>
+				텍스트 데이터는 공공누리 유형조건에 따라 자유이용이 가능합니다. 단, 사진, 이미지, 일러스트, 동영상 등의 일부 자료는 자유롭게 이용하기 위해서는 반드시 해당 저작권자의 허락을 받으셔야 합니다.
+			
+		
+	</p>
+</div>  
+ 
+												
+                        <!-- e: content -->                        
+                        
+                        </div>
+                    </div>
+                  </div>
+                        
+	</div>
+</form>
+
+
+
+
+	
+		<div class="footer">
+            <div class="f_top">
+                <div>
+                    <div class="ft_left">
+                        <div class="f_relate">
+                             <ul>
+                                <li>
+                                    <a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=#none"><span>질병관리청 관련기관 </span><em>바로가기</em></a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="http://www.kdca.go.kr/" target="_blank" rel="noopener noreferrer" title="질병관리청  [새창]">질병관리청<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.cdc.gov/" target="_blank" rel="noopener noreferrer" title="미국질병통제예방센터[CDC]  [새창]">미국질병통제예방센터[CDC]<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.ecdc.europa.eu/" target="_blank" rel="noopener noreferrer" title="유럽질병통제예방센터[ECDC] [새창]">유럽질병통제예방센터[ECDC]<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.who.int/" target="_blank" rel="noopener noreferrer" title="세계보건기구[WHO] [새창]">세계보건기구[WHO]<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.nih.go.jp/" target="_blank" rel="noopener noreferrer" title="일본감염병연구소[NIID] [새창]">일본감염병연구소[NIID]<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.hpa.org.uk/" target="_blank" rel="noopener noreferrer" title="영국공공보건국[PHE] [새창]">영국공공보건국[PHE]<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=#none"><span>보건환경연구원 </span><em>바로가기</em></a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="http://news.seoul.go.kr/welfare/life_health" target="_blank" rel="noopener noreferrer" title="서울특별시 보건환경연구원 [새창]">서울특별시 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.busan.go.kr/ihe/index" target="_blank" rel="noopener noreferrer" title="부산광역시 보건환경연구원 [새창]">부산광역시 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.daegu.go.kr/Health/" target="_blank" rel="noopener noreferrer" title="대구광역시 보건환경연구원 [새창]">대구광역시 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://ecopia.incheon.go.kr/" target="_blank" rel="noopener noreferrer" title="인천광역시 보건환경연구원 [새창]">인천광역시 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://hevi.gwangju.go.kr/" target="_blank" rel="noopener noreferrer" title="광주광역시 보건환경연구원 [새창]">광주광역시 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.daejeon.go.kr/hea/index.do" target="_blank" rel="noopener noreferrer" title="대전광역시 보건환경연구원 [새창]">대전광역시 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.ulsan.go.kr/uihe/index" target="_blank" rel="noopener noreferrer" title="울산광역시 보건환경연구원 [새창]">울산광역시 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://gg.go.kr/gg_health" target="_blank" rel="noopener noreferrer" title="경기도 보건환경연구원 [새창]">경기도 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.gihe.re.kr/" target="_blank" rel="noopener noreferrer" title="강원도 보건환경연구원 [새창]">강원도 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://here.cb21.net/" target="_blank" rel="noopener noreferrer" title="충청북도 보건환경연구원 [새창]">충청북도 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.chungnam.go.kr/healthenvMain.do" target="_blank" rel="noopener noreferrer" title="충청남도 보건환경연구원 [새창]">충청남도 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://jihe.jeonbuk.go.kr/" target="_blank" rel="noopener noreferrer" title="전라북도 보건환경연구원 [새창]">전라북도 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.jihe.go.kr/" target="_blank" rel="noopener noreferrer" title="전라남도 보건환경연구원 [새창]">전라남도 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.gb.go.kr/Main/open_contents/section/inhen/index.html" target="_blank" rel="noopener noreferrer" title="경상북도 보건환경연구원 [새창]">경상북도 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://www.gyeongnam.go.kr/knhe/index.gyeong" target="_blank" rel="noopener noreferrer" title="경상남도 보건환경연구원 [새창]">경상남도 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="http://hei.jeju.go.kr/" target="_blank" rel="noopener noreferrer" title="제주특별자치도 보건환경연구원 [새창]">제주특별자치도 보건환경연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                            <li><a href="https://www.sejong.go.kr/vri.do" target="_blank" rel="noopener noreferrer" title="세종시 보건환경 연구원 [새창]">세종시 보건환경 연구원<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=#none"><span>관련기관 </span><em>바로가기</em></a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="https://kosis.kr/covid/covid_index.do" target="_blank" rel="noopener noreferrer" title="통계청 코로나19 [새창]">통계청 코로나19<i class="ico_window"><span class="hdn">새창</span></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>                                
+                            </ul>
+
+                        </div>
+                    </div>
+            	</div>
+            </div>
+            <div class="f_bottom">
+                <div>
+                    <div class="fb_left">
+                        <div class="f_navigation">
+                            <ul>
+                                <li class="txt_private"><strong>신고상담</strong></li>
+                                <li>보건소</li>
+                                <li class="cdcinfo">질병관리청 콜센터 1339</li>
+                                <li>지역번호 + 120</li>
+                                <li>지역번호 + 114</li>
+                            </ul>
+                        </div>
+                        <div class="f_copyright">
+                            <p>Copyright ⓒ By MOHW. All Rights Reserved.</p>
+                        </div>
+                    </div>
+					 <div class="fb_right">
+					 	<div class="f_open">
+							<a href="http://www.kogl.or.kr/" target="_blank" title="OPEN 공공누리 공공저작물 자유이용허락 사이트 이동 - 새창"><span class="hdn">OPEN 공공누리 공공저작물 자유이용허락</span><i class="ico_window"><span class="hdn">새창</span></i></a>
+						</div>
+					 </div>                    
+                </div>
+            </div>
+        </div>
+
+		<a href="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&amp;brdGubun=11&amp;ncvContSeq=&amp;contSeq=&amp;board_id=&amp;gubun=#header" class="btn_top" style="display: none;"><span class="hdn">상단으로 이동</span></a>
+
+		<div class="body_bg"></div>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./index_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-159814989-1');
+</script>
+	</div>
+	<script>
+		$(function(){
+			// 지역별 확진자 비율
+			RPR_B_data = {
+			    label: [],
+			    figure: []
+			};
+			
+			
+				RPR_B_data.label.push("서울");
+				RPR_B_data.figure.push("45020");
+			
+				RPR_B_data.label.push("기타");
+				RPR_B_data.figure.push("42096");
+			
+				RPR_B_data.label.push("경기");
+				RPR_B_data.figure.push("40020");
+			
+				RPR_B_data.label.push("대구");
+				RPR_B_data.figure.push("10177");
+			
+				RPR_B_data.label.push("인천");
+				RPR_B_data.figure.push("6283");
+			
+			
+// 			// 집단 별 확진자 비율
+// 			GIR_data = {
+// 			    label: [],
+// 			    figure: []
+// 			};
+			
+// 			GIR_data.label.push("신천지 관련");
+// 			GIR_data.label.push("기타 집단발생");
+// 			GIR_data.label.push("산발적 발생");
+			
+// 			GIR_data.figure.push("");
+// 			GIR_data.figure.push("");
+// 			GIR_data.figure.push("");
+
+			//감염경로별 확진자 현황
+			TC_data = {
+			    label: [],
+			    figure: []
+			};
+			
+			
+				TC_data.label.push("선행확진자접촉");
+				TC_data.figure.push("3727");
+			
+				TC_data.label.push("조사중");
+				TC_data.figure.push("2185");
+			
+				TC_data.label.push("집단발병");
+				TC_data.figure.push("1890");
+			
+				TC_data.label.push("해외유입");
+				TC_data.figure.push("281");
+			
+				TC_data.label.push("병원및요양(병)원 등");
+				TC_data.figure.push("90");
+			
+				TC_data.label.push("해외유입관련");
+				TC_data.figure.push("1");
+			
+			
+			// 주간확진자 동향
+			PT_data = {
+					date: [],
+				    total: [],
+				    daily: []
+			};
+			
+			
+				if("0" != 0){
+					PT_data.date.push("20210529".substr(4,2) + "." + "20210529".substr(6,2));
+					PT_data.total.push("139431");
+					PT_data.daily.push("139431" - "0");
+				}
+			
+				if("139431" != 0){
+					PT_data.date.push("20210530".substr(4,2) + "." + "20210530".substr(6,2));
+					PT_data.total.push("139910");
+					PT_data.daily.push("139910" - "139431");
+				}
+			
+				if("139910" != 0){
+					PT_data.date.push("20210531".substr(4,2) + "." + "20210531".substr(6,2));
+					PT_data.total.push("140340");
+					PT_data.daily.push("140340" - "139910");
+				}
+			
+				if("140340" != 0){
+					PT_data.date.push("20210601".substr(4,2) + "." + "20210601".substr(6,2));
+					PT_data.total.push("140799");
+					PT_data.daily.push("140799" - "140340");
+				}
+			
+				if("140799" != 0){
+					PT_data.date.push("20210602".substr(4,2) + "." + "20210602".substr(6,2));
+					PT_data.total.push("141476");
+					PT_data.daily.push("141476" - "140799");
+				}
+			
+				if("141476" != 0){
+					PT_data.date.push("20210603".substr(4,2) + "." + "20210603".substr(6,2));
+					PT_data.total.push("142157");
+					PT_data.daily.push("142157" - "141476");
+				}
+			
+				if("142157" != 0){
+					PT_data.date.push("20210604".substr(4,2) + "." + "20210604".substr(6,2));
+					PT_data.total.push("142852");
+					PT_data.daily.push("142852" - "142157");
+				}
+			
+				if("142852" != 0){
+					PT_data.date.push("20210605".substr(4,2) + "." + "20210605".substr(6,2));
+					PT_data.total.push("143596");
+					PT_data.daily.push("143596" - "142852");
+				}
+			
+			
+			// 주간격리해제 동향
+			CT_data = {
+					date: [],
+				    total: [],
+				    daily: []
+			};
+			
+				if("0" != 0){
+					CT_data.date.push("20210529".substr(4,2) + "." + "20210529".substr(6,2));
+					CT_data.total.push("129739");
+					CT_data.daily.push("129739" - "0");
+				}
+			
+				if("129739" != 0){
+					CT_data.date.push("20210530".substr(4,2) + "." + "20210530".substr(6,2));
+					CT_data.total.push("130381");
+					CT_data.daily.push("130381" - "129739");
+				}
+			
+				if("130381" != 0){
+					CT_data.date.push("20210531".substr(4,2) + "." + "20210531".substr(6,2));
+					CT_data.total.push("130823");
+					CT_data.daily.push("130823" - "130381");
+				}
+			
+				if("130823" != 0){
+					CT_data.date.push("20210601".substr(4,2) + "." + "20210601".substr(6,2));
+					CT_data.total.push("131463");
+					CT_data.daily.push("131463" - "130823");
+				}
+			
+				if("131463" != 0){
+					CT_data.date.push("20210602".substr(4,2) + "." + "20210602".substr(6,2));
+					CT_data.total.push("132068");
+					CT_data.daily.push("132068" - "131463");
+				}
+			
+				if("132068" != 0){
+					CT_data.date.push("20210603".substr(4,2) + "." + "20210603".substr(6,2));
+					CT_data.total.push("132699");
+					CT_data.daily.push("132699" - "132068");
+				}
+			
+				if("132699" != 0){
+					CT_data.date.push("20210604".substr(4,2) + "." + "20210604".substr(6,2));
+					CT_data.total.push("133289");
+					CT_data.daily.push("133289" - "132699");
+				}
+			
+				if("133289" != 0){
+					CT_data.date.push("20210605".substr(4,2) + "." + "20210605".substr(6,2));
+					CT_data.total.push("133763");
+					CT_data.daily.push("133763" - "133289");
+				}
+			
+			
+			// 국내일일확진자 - 해외유입 /국내발생
+			DP_data = {
+					date: [],
+					oversea: [],
+				    region: []
+			};
+			
+			DP_data.oversea.push("16")
+			DP_data.oversea.push("19")
+			DP_data.oversea.push("10")
+			DP_data.oversea.push("23")
+			DP_data.oversea.push("9")
+			DP_data.oversea.push("21")
+			DP_data.oversea.push("19")
+			
+			DP_data.region.push("464")
+			DP_data.region.push("411")
+			DP_data.region.push("449")
+			DP_data.region.push("654")
+			DP_data.region.push("672")
+			DP_data.region.push("674")
+			DP_data.region.push("725")
+
+			DP_data.date.push("05.30")
+			DP_data.date.push("05.31")
+			DP_data.date.push("06.01")
+			DP_data.date.push("06.02")
+			DP_data.date.push("06.03")
+			DP_data.date.push("06.04")
+			DP_data.date.push("06.05")
+			
+			RPRBChart();
+// 			GIRChart();
+			PTChart();
+			CTChart();
+			TCChart();
+			DPChart();
+		});
+	</script>
+
+</body></html>
