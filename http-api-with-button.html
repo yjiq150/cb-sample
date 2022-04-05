@@ -11,7 +11,7 @@
 <input type="button" value="제목/내용 불러오기" onclick="loadTitleAndContent()">
 <script>
     function loadTitleAndContent() {
-        fetch('https://yjiq150.github.io/cb-sample/example-data.json')
+        fetch('https://yjiq150.github.io/coronaboard-crawling-sample/example-data.json')
             .then(response => response.json())
             .then(result => {
                 document.getElementById('title').textContent = result.title
